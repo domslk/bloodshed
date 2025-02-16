@@ -8,26 +8,26 @@ public class Alarm : MonoBehaviour
     public int randomint;
     public bool firstClick = true;
     public TextMeshProUGUI statusText;
+    public int runSec;
 
     
     
     void Start()
     {
-        
-       
         randomint = Random.Range(15, 25);
         StartCoroutine(StartCountdown());
-        
-            
-        
+    }
+
+    void Update() {
+        if (playing) {
+        runSec += 1;
+    }
     }
 
     private IEnumerator StartCountdown() {
         yield return new WaitForSeconds(randomint);
         audioSource.Play();
         playing = true;
-        
-
     }
 
     public void OnMouseDown() {
@@ -42,7 +42,7 @@ public class Alarm : MonoBehaviour
             audioSource.Stop();
             playing = false;
             StartCoroutine(StartCountdown());
-            Debug.Log(randomint);
+            runSec = 0;
         }
         
 
@@ -55,4 +55,6 @@ public class Alarm : MonoBehaviour
     private void OnMouseExit() {
         statusText.text = "";
     }
+
+     
 }

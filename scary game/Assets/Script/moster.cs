@@ -29,6 +29,10 @@ public class moster : MonoBehaviour
             StartCoroutine(Death());
         } else if (!isDeathCoroutineRunning && light.recharging && migrant.isOutside) {
             StartCoroutine(Death());
+        } else if (!isDeathCoroutineRunning && alarm.runSec >= 600 && migrant.isOutside) {
+            StartCoroutine(Death());
+        } else if (!isDeathCoroutineRunning && light.recharging && window.opened || !isDeathCoroutineRunning && light.recharging && door.isOpened) {
+            StartCoroutine(Death());
         } 
     }
 

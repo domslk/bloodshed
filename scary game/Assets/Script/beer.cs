@@ -13,7 +13,7 @@ public class beer : MonoBehaviour
 
     private IEnumerator isClicked() {
         beerClicked = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.8f);
         beerClicked = false;
         beerClickCounter += 1;
     }

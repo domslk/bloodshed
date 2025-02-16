@@ -17,6 +17,8 @@ public class ToggleLight : MonoBehaviour
     private float batteryTimer;
     public bool recharging = false;
     public Image originalBattery;
+    public Image RightArm;
+    public Image LeftArm;
     public void lightToggle() {
         StartCoroutine(lightToggleIE());
     }
@@ -27,6 +29,8 @@ public class ToggleLight : MonoBehaviour
         if (on && batteryLevel > 0) {
             batteryTimer = 0f;
             spotLight.enabled = true;
+            LeftArm.enabled = true;
+            RightArm.enabled = true;
             while (on) {
                 randomint = Random.Range(30, 60);
                 spotLight.intensity = randomint; 
@@ -39,6 +43,8 @@ public class ToggleLight : MonoBehaviour
                     if (batteryLevel <= 0)
                         {
                             spotLight.enabled = false; 
+                            LeftArm.enabled = false;
+                            RightArm.enabled = false;
                             on = false; 
                         }
                     batteryTimer = 0f;
@@ -46,6 +52,8 @@ public class ToggleLight : MonoBehaviour
             } 
     } else {
         spotLight.enabled = false;
+        LeftArm.enabled = false;
+        RightArm.enabled = false;
         }
     }
     public void recharge() {

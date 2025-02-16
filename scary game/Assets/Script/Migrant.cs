@@ -22,15 +22,15 @@ public class Migrant : MonoBehaviour
     void Start() {
         updated = false;
         randomIntTime = Random.Range(20,30);
-        randomIntDistance = Random.Range(10, 100);
+        randomIntDistance = Random.Range(30, 100);
         StartCoroutine(StartCountdown());
     }
 
     void Update() {
         if (updated) {
             updated = false;
-            randomIntTime = Random.Range(10,20);
-            randomIntDistance = Random.Range(10,100);
+            randomIntTime = Random.Range(15,25);
+            randomIntDistance = Random.Range(10,100); // 10 - 100
             StartCoroutine(StartCountdown());
         } else if (distance <= 40f) {
             if (!huntRunning) {
@@ -89,6 +89,6 @@ public class Migrant : MonoBehaviour
     private void HideMigrant() {
         migrantShown = false;
         audioSource.Play();
-        MigrantObj.transform.position = new Vector3(9.27f, 1.129f, 9.81f);
+        MigrantObj.transform.position = new Vector3(9.27f, 1.129f, 0f);
     }
 }
