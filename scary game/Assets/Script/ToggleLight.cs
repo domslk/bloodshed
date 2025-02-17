@@ -19,6 +19,8 @@ public class ToggleLight : MonoBehaviour
     public Image originalBattery;
     public Image RightArm;
     public Image LeftArm;
+    [SerializeField] AudioSource audioSource;
+
     public void lightToggle() {
         StartCoroutine(lightToggleIE());
     }
@@ -64,6 +66,7 @@ public class ToggleLight : MonoBehaviour
         if (!on) {
         statusText.text = "Changing...";
         recharging = true;
+        audioSource.Play();
         yield return new WaitForSeconds(2f); 
         recharging = false;
         statusText.text = "";
