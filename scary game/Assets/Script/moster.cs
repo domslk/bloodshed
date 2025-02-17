@@ -21,19 +21,19 @@ public class moster : MonoBehaviour
     
     
     void Update() {
-        if (!isDeathCoroutineRunning && door.isOpened && Beer.beerClicked || !isDeathCoroutineRunning && window.opened && Beer.beerClicked) {
+        if (isDeathCoroutineRunning) {
+            return;
+        }
+
+        if ((door.isOpened || window.opened) && Beer.beerClicked) {
             StartCoroutine(Death());
-        } else if (!isDeathCoroutineRunning && stress.stressLevelsInt >= 100) {
+        } else if (stress.stressLevelsInt >= 100 || oxygen.level < 0) {
             StartCoroutine(Death());
-        } else if (!isDeathCoroutineRunning && oxygen.level < 0) {
+        } else if ((light.recharging || alarm.runSec >= 600) && migrant.isOutside) {
             StartCoroutine(Death());
-        } else if (!isDeathCoroutineRunning && light.recharging && migrant.isOutside) {
+        } else if ((window.opened || door.isOpened) && light.recharging) {
             StartCoroutine(Death());
-        } else if (!isDeathCoroutineRunning && alarm.runSec >= 600 && migrant.isOutside) {
-            StartCoroutine(Death());
-        } else if (!isDeathCoroutineRunning && light.recharging && window.opened || !isDeathCoroutineRunning && light.recharging && door.isOpened) {
-            StartCoroutine(Death());
-        } 
+        }
     }
 
     public IEnumerator Death() {
