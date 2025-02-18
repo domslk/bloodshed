@@ -16,7 +16,7 @@ public class Clock : MonoBehaviour
 
     void Update() {
         if (!running) {
-            StartCoroutine(clock);
+            StartCoroutine(clock());
         }
     }
     private IEnumerator clock() {
