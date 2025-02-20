@@ -1,14 +1,4 @@
-# Ignore system files
-.DS_Store
-Thumbs.db
-
-# Ignore temporary files
-*.tmp
-*.bak
-*.swp
-*.swo
-
-# Unity specific
+.utmp/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -18,19 +8,17 @@ Thumbs.db
 /[Uu]ser[Ss]ettings/
 
 /[Mm]emoryCaptures/
+
 /[Rr]ecordings/
+
 /[Aa]ssets/Plugins/Editor/JetBrains*
 
-# IDE specific
 .vs/
-.idea/
+
 .gradle/
 
-# Unity specific project files
 ExportedObj/
 .consulo/
-
-# Ignore Unity project files
 *.csproj
 *.unityproj
 *.sln
@@ -50,14 +38,16 @@ ExportedObj/
 *.pdb.meta
 *.mdb.meta
 
+
 sysinfo.txt
-crashlytics-build.properties
 
 *.apk
 *.aab
 *.unitypackage
 *.unitypackage.meta
 *.app
+
+crashlytics-build.properties
 
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 /[Aa]ssets/[Ss]treamingAssets/aa.meta

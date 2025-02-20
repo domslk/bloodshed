@@ -89,6 +89,6 @@ public class Migrant : MonoBehaviour
     private void HideMigrant() {
         migrantShown = false;
         audioSource.Play();
-        MigrantObj.transform.position = new Vector3(9.27f, -8.29f, 0f);
+        MigrantObj.transform.position = new Vector3(9.27f, 1.129f, 0f);
     }
 }
