@@ -16,7 +16,7 @@ public class Clock : MonoBehaviour
 
     void Update() {
         if (!running) {
-            StartCoroutine(clock);
+            StartCoroutine(clock());
         }
     }
     private IEnumerator clock() {
@@ -24,7 +24,7 @@ public class Clock : MonoBehaviour
         yield return new WaitForSeconds(89);
         time += 1;
         if (minutes == 3) {
-            minutes = 0;
+            minutes = 0;   
         } else {
             minutes = 3;
         }
