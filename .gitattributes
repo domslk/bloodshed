@@ -1,2 +1,16 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Force .cs files to be recognized as C#
+*.cs linguist-language=C#
+
+# Exclude .meta files from language stats (prevents misclassification)
+*.meta linguist-detectable=false
+
+# Exclude other Unity-specific files from language stats
+*.unity linguist-detectable=false
+*.prefab linguist-detectable=false
+*.asset linguist-detectable=false
+*.mat linguist-detectable=false
+*.anim linguist-detectable=false
+
+# Optional: Ensure text files are handled consistently (Unity compatibility)
+*.cs text eol=lf
+*.meta text eol=lf
