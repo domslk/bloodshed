@@ -1,12 +1,13 @@
 *.cs linguist-language=C#
+*.cs linguist-detectable=true
 *.meta linguist-detectable=false
-*.shader linguist-detectable=true
-*.shader linguist-language=ShaderLab
-*.unity linguist-detectable=false
-*.prefab linguist-detectable=false
 *.asset linguist-detectable=false
+*.prefab linguist-detectable=false
+*.unity linguist-detectable=false
 *.mat linguist-detectable=false
 *.anim linguist-detectable=false
+*.shader linguist-detectable=true
+*.shader linguist-language=ShaderLab
 *.nb linguist-detectable=false
 *.m linguist-detectable=false
 *.wl linguist-detectable=false
