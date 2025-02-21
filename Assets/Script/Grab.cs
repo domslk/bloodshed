@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections; 
-// only the grab animation for right hand
+// only right hand animation
 public class Grab : MonoBehaviour
 {
 
