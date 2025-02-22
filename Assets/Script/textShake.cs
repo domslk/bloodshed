@@ -9,7 +9,7 @@ public class textShake : MonoBehaviour
     public bool animationEnd = false;
     void Update()
     {   
-        wiggleAmount = Random.Range(-0.2f, 0.2f);
+        wiggleAmount = Random.Range(-0.3f, 0.3f);
         text.transform.position = new Vector3(text.transform.position.x + wiggleAmount, text.transform.position.y + wiggleAmount, text.transform.position.z);
     }
 

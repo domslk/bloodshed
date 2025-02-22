@@ -8,6 +8,7 @@ public class showJumpscare : MonoBehaviour
     public VideoPlayer videoPlayer;
     public GameObject canvasVideo;
     public GameObject canvas;
+    public GameObject text;
 
 
     void Start() {
@@ -15,17 +16,18 @@ public class showJumpscare : MonoBehaviour
     }
 
     public void ShowVideo() {
-        canvasVideo.SetActive(true);
-        canvas.SetActive(false);
         videoPlayer.Play();
+        canvas.SetActive(false);
+        canvasVideo.SetActive(true);
         StartCoroutine(noVideo(1));
     }
 
     private IEnumerator noVideo(int wait) {
         yield return new WaitForSeconds(wait);
+        canvas.SetActive(true);
+        text.SetActive(true);
         videoPlayer.Stop();
         canvasVideo.SetActive(false);
-        canvas.SetActive(true);
         StartCoroutine(goHome());
     }
 
