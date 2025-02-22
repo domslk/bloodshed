@@ -5,8 +5,7 @@ public class Escape : MonoBehaviour
 {   
     public Clock clock;
     public TextMeshProUGUI statusText;
-    void Update()
-    {
+    void Update() {
         return;
     }
 
@@ -19,5 +18,11 @@ public class Escape : MonoBehaviour
 
     private void OnMouseExit() {
         statusText.text = "";
+    }
+
+    private void OnMouseDown() {
+        if (clock.home) {
+            Debug.Log("you won");
+        }
     }
 }

@@ -38,7 +38,7 @@ public class moster : MonoBehaviour
     public IEnumerator Death() {
         isDeathCoroutineRunning = true;
         yield return new WaitForSeconds(0.0001f);
-        SceneManager.LoadScene("Home");
+        SceneManager.LoadScene("Death");
     }
 
     

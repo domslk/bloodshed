@@ -27,7 +27,6 @@ public class Clock : MonoBehaviour
         if (time >= 6) {
             home = true;
         }
-        
         if (minutes == 3) {
             minutes = 0;   
         } else {
