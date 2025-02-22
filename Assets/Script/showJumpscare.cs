@@ -12,13 +12,9 @@ public class showJumpscare : MonoBehaviour
 
 
     void Start() {
-        ShowVideo();
-    }
-
-    public void ShowVideo() {
         videoPlayer.Play();
-        canvas.SetActive(false);
         canvasVideo.SetActive(true);
+        canvas.SetActive(false);
         StartCoroutine(noVideo(1));
     }
 
