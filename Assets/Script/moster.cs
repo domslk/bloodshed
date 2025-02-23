@@ -15,8 +15,7 @@ public class moster : MonoBehaviour
     public ToggleLight light;
     private bool isDeathCoroutineRunning = false;
     public Migrant migrant;
-    
-
+    public Clock clock;
     public TextMeshProUGUI statusText;
     
     
@@ -29,7 +28,8 @@ public class moster : MonoBehaviour
         ((door.isOpened || window.opened) && Beer.beerClicked) || 
         (stress.stressLevelsInt >= 100 || oxygen.level < 0) || 
         ((light.recharging || alarm.runSec >= 600) && migrant.isOutside) || 
-        ((window.opened || door.isOpened) && light.recharging)
+        ((window.opened || door.isOpened) && light.recharging) || 
+        (clock.time == 7)
         ) {
             StartCoroutine(Death());
         }

@@ -22,12 +22,12 @@ public class Clock : MonoBehaviour
     }
     private IEnumerator clock() {
         running = true;
-        yield return new WaitForSeconds(89);
-        time += 1;
+        yield return new WaitForSeconds(1f);
         if (time >= 6) {
             home = true;
         }
         if (minutes == 3) {
+            time += 1;
             minutes = 0;   
         } else {
             minutes = 3;

@@ -40,7 +40,6 @@ public class Migrant : MonoBehaviour
             if (!walkingSound.isPlaying && playing) {
                 playing = false;
                 walkingSound.Play();
-                Debug.Log("sound is playing");
             }
             
             

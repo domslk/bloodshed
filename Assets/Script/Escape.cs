@@ -1,13 +1,12 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public class Escape : MonoBehaviour
 {   
     public Clock clock;
     public TextMeshProUGUI statusText;
-    void Update() {
-        return;
-    }
+   
 
 
     private void OnMouseEnter() {
@@ -22,7 +21,7 @@ public class Escape : MonoBehaviour
 
     private void OnMouseDown() {
         if (clock.home) {
-            Debug.Log("you won");
+            SceneManager.LoadScene("Win");
         }
     }
 }
