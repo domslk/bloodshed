@@ -146,12 +146,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e1ad398e090ed43b18fba81abec06d39, type: 3}
-  m_Resource: {fileID: 8300000, guid: e1ad398e090ed43b18fba81abec06d39, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 15c56a6bb61f145d380174a7873b5b30, type: 3}
+  m_Resource: {fileID: 8300000, guid: 15c56a6bb61f145d380174a7873b5b30, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.29
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -665,8 +665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -69.3305}
-  m_SizeDelta: {x: 160, y: 48.661}
+  m_AnchoredPosition: {x: 1, y: -64.4574}
+  m_SizeDelta: {x: 143.9815, y: 38.9147}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529925307
 MonoBehaviour:
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1.1
+  m_PixelsPerUnitMultiplier: 1.2
 --- !u!222 &529925309
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a283de89d5ec64f0fa97352721208428, type: 3}
+  m_Texture: {fileID: 2800000, guid: d0920997c178d42bfaa72c02a7b8eec7, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: ENTER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2ebd8761dcd95430eb24f9aa073dce1d, type: 2}
   m_sharedMaterial: {fileID: -931685615816557652, guid: 2ebd8761dcd95430eb24f9aa073dce1d, type: 2}
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190266
+    rgba: 4278190335
   m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1245,13 +1245,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
