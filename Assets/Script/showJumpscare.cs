@@ -4,34 +4,54 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class showJumpscare : MonoBehaviour
 {
-
-    public VideoPlayer videoPlayer;
-    public GameObject canvasVideo;
     public GameObject canvas;
-    public GameObject canvasVideoImg;
-    public GameObject canvasVideoVideo;
     public GameObject text;
+    public GameObject img1;
+    public GameObject img2;
+    public GameObject img3;
+    public GameObject img4;
+    public GameObject img5;
 
-
+    private int[] list = {1,2,3,4,5,4,5,4,2,3,4,5,3,5,3,2,3,4,5,3,5,3,2,3,4,5,3,5,3,2};
     void Start() {
-        canvas.SetActive(true);
         StartCoroutine(StartVideo());
     }
 
     private IEnumerator StartVideo() {
-        videoPlayer.Play();
-        canvasVideoVideo.SetActive(true);
-        yield return new WaitForSeconds(0.25f);
-        canvasVideoImg.SetActive(false);
-        canvas.SetActive(false);
-        StartCoroutine(noVideo(1));
+        for (int i = 0; i < list.Length; i++) {
+            switch(list[i]) {
+                case 1: 
+                    img1.SetActive(true);
+                    yield return new WaitForSeconds(0.04f);
+                    img1.SetActive(false);
+                    break;
+                case 2:
+                    img2.SetActive(true);
+                    yield return new WaitForSeconds(0.04f);
+                    img2.SetActive(false);
+                    break;
+                case 3:
+                    img3.SetActive(true);
+                    yield return new WaitForSeconds(0.04f);
+                    img3.SetActive(false);
+                    break;
+                case 4:
+                    img4.SetActive(true);
+                    yield return new WaitForSeconds(0.04f);
+                    img4.SetActive(false);
+                    break;
+                case 5:
+                    img5.SetActive(true);
+                    yield return new WaitForSeconds(0.04f);
+                    img5.SetActive(false);
+                    break;
+
+            }
+        }
+        noVideo(1);
     }
-    private IEnumerator noVideo(int wait) {
-        yield return new WaitForSeconds(wait);
-        canvas.SetActive(true);
+    private void noVideo(int wait) {
         text.SetActive(true);
-        videoPlayer.Stop();
-        canvasVideo.SetActive(false);
         StartCoroutine(goHome());
     }
 
