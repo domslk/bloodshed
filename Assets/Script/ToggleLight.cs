@@ -20,9 +20,11 @@ public class ToggleLight : MonoBehaviour
     public Image RightArm;
     public Image LeftArm;
     [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource click;
 
     public void lightToggle() {
         StartCoroutine(lightToggleIE());
+        click.Play();
     }
 
     private IEnumerator lightToggleIE() {
