@@ -8,6 +8,7 @@ public class Clock : MonoBehaviour
     public int minutes = 0; //0 or 3
     public bool home = false;
     [SerializeField] TextMeshProUGUI statusText;
+    [SerializeField] AudioSource carAudio;
 
     private bool running = false;
 
@@ -22,9 +23,10 @@ public class Clock : MonoBehaviour
     }
     private IEnumerator clock() {
         running = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(89f);
         if (time >= 6) {
             home = true;
+            carAudio.Play();
         }
         if (minutes == 3) {
             time += 1;
